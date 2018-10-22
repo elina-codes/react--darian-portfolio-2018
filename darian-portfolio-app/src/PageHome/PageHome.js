@@ -16,13 +16,6 @@ export default class PageHome extends Component {
         experienceItems: experienceItems
     };
 
-    goToProject = e => {
-        debugger;
-        e.preventDefault();
-        const workUrl = e.currentTarget.getAttribute("href");
-        this.props.history.push(`/work/${workUrl}`);
-    };
-
     toggleMobileNav = () => {
         document.body.classList.toggle("open-nav");
     };
@@ -47,18 +40,18 @@ export default class PageHome extends Component {
                         title={this.state.sections["work"].title}
                         id={this.state.sections["work"].id}
                         workItems={this.state.workItems}
-                        goToProject={this.goToProject}
+                        history={this.props.history}
                     />
                     <SectionExperience
                         title={this.state.sections["experience"].title}
                         id={this.state.sections["experience"].id}
                         experienceItems={this.state.experienceItems}
                     />
-                    <Footer
-                        title={this.state.sections["contact"].title}
-                        id={this.state.sections["contact"].id}
-                    />
                 </main>
+                <Footer
+                    title={this.state.sections["contact"].title}
+                    id={this.state.sections["contact"].id}
+                />
                 <div
                     className="mobile-nav-overlay"
                     onClick={this.toggleMobileNav}

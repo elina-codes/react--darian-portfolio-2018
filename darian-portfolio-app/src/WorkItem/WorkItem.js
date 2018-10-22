@@ -11,9 +11,20 @@ export default class WorkItem extends Component {
         return <ul className="work__duties__list">{listItems}</ul>;
     };
 
+    goToProject = event => {
+        event.preventDefault();
+        const projectName = this.props.url;
+        this.props.history.push(`/work/${projectName}`);
+    };
+
     render() {
+        console.log(this);
         return (
-            <a className="work__grid__item grid__item" href={this.props.url}>
+            <a
+                className="work__grid__item grid__item"
+                href={this.props.url}
+                onClick={this.goToProject}
+            >
                 <div
                     style={{ backgroundImage: `url(${this.props.mainImage})` }}
                     className="work__image"

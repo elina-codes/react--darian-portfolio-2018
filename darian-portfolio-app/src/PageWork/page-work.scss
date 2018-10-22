@@ -1,0 +1,146 @@
+@import "../common/scss/common";
+
+h3 {
+    @media #{$screen-medium-min} {
+        line-height: 1.1;
+    }
+}
+
+.work__section {
+    text-align: left;
+
+    .grid {
+        grid-template-areas: "text image";
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 60px;
+
+        @media #{$screen-medium} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$screen-small} {
+            display: block;
+        }
+    }
+
+    &:nth-child(odd):not(.next-steps) {
+        .grid {
+            grid-template-areas: "image text";
+
+            @media #{$screen-medium-min} {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+    }
+}
+
+.work {
+    &__header {
+        background-image: url(/images/darian-face.jpg);
+        background-color: $color-primary;
+        background-blend-mode: luminosity;
+        background-size: cover;
+        background-position: center;
+        box-shadow: inset 1000px 0 700px -100px rgba(242, 242, 242, 0.95);
+
+        &__title {
+            line-height: 1;
+            margin-bottom: -10px;
+            text-align: left;
+        }
+
+        &__subtitle {
+            margin-left: 4px;
+        }
+    }
+
+    &__section__text {
+        grid-area: text;
+    }
+
+    &__section__image {
+        grid-area: image;
+
+        @media #{$screen-small} {
+            margin-top: 40px;
+        }
+
+        img + img {
+            margin-top: 5%;
+        }
+    }
+}
+
+iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56%;
+}
+
+.more-projects {
+    display: flex;
+
+    &__project {
+        flex: 1;
+        padding: 50px 10%;
+        background-size: cover;
+        background-position: center;
+        background-color: $color-primary;
+        background-blend-mode: luminosity;
+        box-shadow: inset 0 150px 0 100px rgba($color-primary-dark, 0.8);
+        color: $color-white;
+        position: relative;
+
+        @media #{$screen-small} {
+            padding: 50px 5%;
+        }
+
+        &:before {
+            font-size: $font-size-sm;
+            font-family: $font-family-headings;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        &--previous {
+            text-align: right;
+            border-right: 1px solid $color-grey-light;
+
+            @media #{$screen-small} {
+                text-align: left;
+            }
+
+            &:before {
+                content: "Previous project";
+            }
+        }
+        &--next {
+            text-align: left;
+
+            @media #{$screen-small} {
+                text-align: right;
+            }
+
+            &:before {
+                content: "Next project";
+            }
+        }
+
+        &__title {
+            display: block;
+
+            @media #{$screen-small} {
+                display: none;
+            }
+        }
+    }
+}

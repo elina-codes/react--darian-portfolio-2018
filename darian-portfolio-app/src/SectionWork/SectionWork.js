@@ -14,6 +14,8 @@ export default class SectionWork extends Component {
                             title={this.props.workItems[key].title}
                             duties={this.props.workItems[key].duties}
                             mainImage={this.props.workItems[key].mainImage}
+                            url={this.props.workItems[key].url}
+                            history={this.props.history}
                         />
                     ))}
                 </div>

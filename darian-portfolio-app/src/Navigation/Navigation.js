@@ -8,7 +8,7 @@ export default class Navigation extends Component {
                 <nav>
                     {Object.keys(this.props.sections).map(key => (
                         <a
-                            href={`#${this.props.sections[key].id}`}
+                            href={`/#${this.props.sections[key].id}`}
                             key={key}
                             onClick={this.props.toggleMobileNav}
                         >

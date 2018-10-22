@@ -1,15 +1,8 @@
-// import React from 'react';
 import ReactDOM from "react-dom";
 import "./index.css";
-// import App from './App';
-// import * as serviceWorker from './serviceWorker';
-
 import React from "react";
-// import { render } from "react-dom";
 import Router from "./Router";
 // import "./css/style.css";
-
-// render(<Router />, document.querySelector("#main"));
 
 ReactDOM.render(<Router />, document.getElementById("root"));
 

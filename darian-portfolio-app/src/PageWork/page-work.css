@@ -1,0 +1,106 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@media only screen and (min-width: 1025px) {
+  h3 {
+    line-height: 1.1; } }
+
+.work__section {
+  text-align: left; }
+  .work__section .grid {
+    grid-template-areas: "text image";
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 60px; }
+    @media only screen and (max-width: 1024px) {
+      .work__section .grid {
+        grid-template-columns: 1fr 1fr; } }
+    @media only screen and (max-width: 800px) {
+      .work__section .grid {
+        display: block; } }
+  .work__section:nth-child(odd):not(.next-steps) .grid {
+    grid-template-areas: "image text"; }
+    @media only screen and (min-width: 1025px) {
+      .work__section:nth-child(odd):not(.next-steps) .grid {
+        grid-template-columns: 2fr 1fr; } }
+
+.work__header {
+  background-image: url(/images/darian-face.jpg);
+  background-color: #2c8ab6;
+  background-blend-mode: luminosity;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 1000px 0 700px -100px rgba(242, 242, 242, 0.95); }
+  .work__header__title {
+    line-height: 1;
+    margin-bottom: -10px;
+    text-align: left; }
+  .work__header__subtitle {
+    margin-left: 4px; }
+
+.work__section__text {
+  grid-area: text; }
+
+.work__section__image {
+  grid-area: image; }
+  @media only screen and (max-width: 800px) {
+    .work__section__image {
+      margin-top: 40px; } }
+  .work__section__image img + img {
+    margin-top: 5%; }
+
+iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0; }
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56%; }
+
+.more-projects {
+  display: flex; }
+  .more-projects__project {
+    flex: 1;
+    padding: 50px 10%;
+    background-size: cover;
+    background-position: center;
+    background-color: #2c8ab6;
+    background-blend-mode: luminosity;
+    box-shadow: inset 0 150px 0 100px rgba(9, 29, 38, 0.8);
+    color: white;
+    position: relative; }
+    @media only screen and (max-width: 800px) {
+      .more-projects__project {
+        padding: 50px 5%; } }
+    .more-projects__project:before {
+      font-size: 18px;
+      font-family: "Teko", sans-serif;
+      text-transform: uppercase;
+      opacity: 0.8; }
+    .more-projects__project--previous {
+      text-align: right;
+      border-right: 1px solid #f2f2f2; }
+      @media only screen and (max-width: 800px) {
+        .more-projects__project--previous {
+          text-align: left; } }
+      .more-projects__project--previous:before {
+        content: "Previous project"; }
+    .more-projects__project--next {
+      text-align: left; }
+      @media only screen and (max-width: 800px) {
+        .more-projects__project--next {
+          text-align: right; } }
+      .more-projects__project--next:before {
+        content: "Next project"; }
+    .more-projects__project__title {
+      display: block; }
+      @media only screen and (max-width: 800px) {
+        .more-projects__project__title {
+          display: none; } }
