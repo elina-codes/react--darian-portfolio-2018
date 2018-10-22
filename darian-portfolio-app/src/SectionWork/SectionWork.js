@@ -7,7 +7,7 @@ export default class SectionWork extends Component {
     render() {
         return (
             <HomeSection id={this.props.id} title={this.props.title}>
-                <div class="work__grid grid">
+                <div className="work__grid grid">
                     {Object.keys(this.props.workItems).map(key => (
                         <WorkItem
                             key={key}

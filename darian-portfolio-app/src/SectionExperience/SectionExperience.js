@@ -7,7 +7,7 @@ export default class SectionExperience extends Component {
     render() {
         return (
             <HomeSection id={this.props.id} title={this.props.title}>
-                <div class="experience-container">
+                <div className="experience-container">
                     {Object.keys(this.props.experienceItems).map(key => (
                         <ExperienceItem
                             key={key}

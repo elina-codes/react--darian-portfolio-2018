@@ -20,7 +20,7 @@ export default class WorkItem extends Component {
                 />
                 <div className="work__grid__item__details">
                     <h3>{this.props.title}</h3>
-                    <p>{<this.DutiesList />}</p>
+                    {<this.DutiesList />}
                 </div>
             </a>
         );

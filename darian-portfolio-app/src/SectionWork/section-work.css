@@ -45,9 +45,6 @@
   .work__grid__item h3 {
     margin: 0;
     line-height: 1; }
-  .work__grid__item p {
-    font-size: 18px;
-    color: #9c9c9c; }
 
 .work__image {
   background-size: cover;
@@ -57,7 +54,9 @@
   position: relative; }
 
 .work__duties__list__item {
-  display: inline-block; }
+  display: inline-block;
+  font-size: 18px;
+  color: #9c9c9c; }
   .work__duties__list__item + .work__duties__list__item:before {
     content: "|";
     margin-right: 8px;

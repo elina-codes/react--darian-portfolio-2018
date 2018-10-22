@@ -55,11 +55,6 @@
             margin: 0;
             line-height: 1;
         }
-
-        p {
-            font-size: $font-size-sm;
-            color: $color-grey;
-        }
     }
 }
 
@@ -74,6 +69,8 @@
 .work__duties__list {
     &__item {
         display: inline-block;
+        font-size: $font-size-sm;
+        color: $color-grey;
 
         + .work__duties__list__item {
             &:before {

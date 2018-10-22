@@ -23,10 +23,17 @@ export default class PageHome extends Component {
         this.props.history.push(`/work/${workUrl}`);
     };
 
+    toggleMobileNav = () => {
+        document.body.classList.toggle("open-nav");
+    };
+
     render() {
         return (
             <React.Fragment>
-                <Navigation sections={this.state.sections} />
+                <Navigation
+                    sections={this.state.sections}
+                    toggleMobileNav={this.toggleMobileNav}
+                />
                 <main>
                     <SectionHome
                         title={this.state.sections["home"].title}
@@ -52,6 +59,10 @@ export default class PageHome extends Component {
                         id={this.state.sections["contact"].id}
                     />
                 </main>
+                <div
+                    className="mobile-nav-overlay"
+                    onClick={this.toggleMobileNav}
+                />
             </React.Fragment>
         );
     }
