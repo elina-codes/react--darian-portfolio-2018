@@ -1,0 +1,26 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+footer {
+  background: #111;
+  color: white; }
+  footer img {
+    max-width: 100px; }
+
+.footer__icons {
+  display: flex;
+  justify-content: center; }
+
+.footer__link {
+  display: block;
+  margin: 10px 20px; }
+  .footer__link:hover .footer__icon {
+    transform: scale(1.1, 1.1); }
+
+.footer__icon {
+  display: block;
+  height: 60px;
+  transition: all 0.2s ease; }

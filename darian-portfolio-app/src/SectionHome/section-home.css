@@ -1,0 +1,42 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+#home {
+  background-image: url("/images/darian_bg.jpg");
+  background-color: #2c8ab6;
+  background-blend-mode: luminosity;
+  filter: FlipH;
+  color: white;
+  text-align: right;
+  text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.2);
+  position: relative; }
+  #home .wrapper {
+    padding: 10vw 10%;
+    position: relative;
+    z-index: 1; }
+  #home:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: black;
+    opacity: 0.5; }
+
+.home__title {
+  text-align: inherit;
+  margin-bottom: 0;
+  line-height: 1;
+  font-weight: 500;
+  color: inherit; }
+
+.home__subtitle {
+  text-align: inherit;
+  line-height: 1;
+  font-weight: 100;
+  color: inherit;
+  margin-bottom: 0; }

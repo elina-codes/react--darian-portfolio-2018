@@ -1,0 +1,65 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@media only screen and (max-width: 1024px) {
+  .work__grid.grid {
+    grid-template-columns: 1fr 1fr; } }
+
+@media only screen and (max-width: 800px) {
+  .work__grid.grid {
+    grid-template-columns: 1fr;
+    grid-gap: 20px; } }
+
+.work__grid__item {
+  background: white;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden; }
+  .work__grid__item:before {
+    content: "";
+    display: block;
+    background-image: url("/images/darian-face.jpg");
+    width: 180px;
+    height: 180px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    opacity: 0;
+    transition: all 0.2s ease;
+    z-index: 1; }
+  .work__grid__item:hover .work__image {
+    filter: blur(5px); }
+  .work__grid__item:hover:before {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .work__grid__item__details {
+    padding: 20px;
+    text-align: center; }
+  .work__grid__item h3 {
+    margin: 0;
+    line-height: 1; }
+  .work__grid__item p {
+    font-size: 18px;
+    color: #9c9c9c; }
+
+.work__image {
+  background-size: cover;
+  background-position: center center;
+  padding-bottom: 68%;
+  transition: all 0.2s ease;
+  position: relative; }
+
+.work__duties__list__item {
+  display: inline-block; }
+  .work__duties__list__item + .work__duties__list__item:before {
+    content: "|";
+    margin-right: 8px;
+    margin-left: 8px;
+    opacity: 0.3; }

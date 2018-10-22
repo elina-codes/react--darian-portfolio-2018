@@ -1,0 +1,41 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+#what-i-do img {
+  max-height: 150px;
+  max-width: 250px;
+  display: block;
+  margin: 0 auto 50px; }
+  @media only screen and (max-width: 1024px) {
+    #what-i-do img {
+      margin-bottom: 20px; } }
+  @media only screen and (max-width: 800px) {
+    #what-i-do img {
+      max-height: 90px;
+      max-width: 110px; } }
+
+#what-i-do .grid {
+  grid-column-gap: 80px; }
+  @media only screen and (max-width: 1024px) {
+    #what-i-do .grid {
+      display: block; } }
+  @media only screen and (max-width: 1024px) {
+    #what-i-do .grid__item {
+      margin: 0 auto 40px;
+      max-width: 600px; } }
+
+#what-i-do h3 {
+  position: relative;
+  display: inline-block; }
+  #what-i-do h3:before {
+    content: "";
+    width: calc(100% + 4px);
+    border-top: 10px solid #d3eaf4;
+    position: absolute;
+    bottom: 30%;
+    z-index: -1;
+    left: -2px;
+    transition: all 0.2s ease; }
